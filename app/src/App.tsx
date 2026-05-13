@@ -33,7 +33,6 @@ import {
   Star,
   Quote,
   Heart,
-  Coffee,
   Menu,
   X,
 } from 'lucide-react';
@@ -72,8 +71,8 @@ const PROJECTS = [
     name: 'Cravingly',
     role: 'Head of Brand Marketing & Growth',
     tag: 'Brand · Growth',
-    year: '2022',
-    color: '#c6ff3d',
+    year: '2024',
+    color: '#d5aa33',
     illustration: 'cravingly' as const,
     blurb: 'Built brand identity, social, influencer and paid programs from zero — Instagram to 10K+, 50K+ app downloads, 1L+ orders.',
     stat: '5M+ reel views',
@@ -92,10 +91,10 @@ const PROJECTS = [
     slug: 'techmatic',
     n: '03',
     name: 'Techmatic Systems',
-    role: 'SEO Analyst · App Marketing Head',
-    tag: 'App Marketing · SEO',
+    role: 'SEO Analyst',
+    tag: 'SEO',
     year: '2024',
-    color: '#3dd6ff',
+    color: '#56b2cc',
     illustration: 'techmatic' as const,
     blurb: 'Owning SEO + app marketing — paid media, influencer programs, email/WhatsApp funnels, and PPC optimisation lifting ROI 35%.',
     stat: '+50% organic traffic',
@@ -103,7 +102,6 @@ const PROJECTS = [
     impact: [
       { k: 'Organic traffic', v: '+50%' },
       { k: 'PPC ROI', v: '+35%' },
-      { k: 'Influencer reach', v: '1M+' },
     ],
     story: [
       'At Techmatic I lead SEO and app marketing across multiple products. I run paid media on Meta and Google, manage social presence across seven platforms, and orchestrate influencer programs that pushed 1M+ reach.',
@@ -117,7 +115,7 @@ const PROJECTS = [
     role: 'Digital Marketing Executive',
     tag: 'SEO · Ads · Analytics',
     year: '2023',
-    color: '#a78bff',
+    color: '#cc8bff',
     illustration: 'compulease' as const,
     blurb: 'End-to-end SEO, Google & Meta Ads, audits, and analytics — sharpening lead generation and reporting accuracy.',
     stat: 'Full-funnel ownership',
@@ -136,7 +134,7 @@ const PROJECTS = [
 
 const STATS = [
   { value: '03+', label: 'Years experience' },
-  { value: '20+', label: 'Brands & products' },
+  { value: '4+', label: 'Brands & projects' },
   { value: '50K+', label: 'App downloads driven' },
   { value: '35%', label: 'Avg PPC ROI lift' },
 ];
@@ -157,16 +155,15 @@ const SERVICES = [
 ];
 
 const EXPERIENCE = [
-  { role: 'SEO Analyst · App Marketing Head', company: 'Techmatic Systems Pvt Ltd',
-    period: 'Apr 2024 — Present', location: 'Hyderabad',
+  { role: 'SEO Analyst', company: 'Techmatic Systems Pvt Ltd',
+    period: 'Apr 2024 — Present✨', location: 'Hyderabad',
     points: [
       'Improved organic traffic 50% and lifted SERP rankings.',
       'Built paid media engine on Meta Ads & Google Ads at scale.',
-      'Led influencer campaigns driving 1M+ reach.',
       'Improved PPC ROI 35% through optimisation and creative iteration.',
     ] },
   { role: 'Head of Brand Marketing & Growth', company: 'Cravingly',
-    period: '2022 — 2023', location: 'Hyderabad',
+    period: 'Jul 2024 — 2026', location: 'Hyderabad',
     points: [
       'Built brand identity, social, influencer and paid programs from zero.',
       'Scaled Instagram to 10K+ and reels to 5M+ views.',
@@ -174,7 +171,7 @@ const EXPERIENCE = [
       'Led investor conversations across US, UAE & London.',
     ] },
   { role: 'Digital Marketing Associate', company: 'Compulease Network Pvt Ltd',
-    period: 'Feb 2023 — Feb 2024', location: 'Hyderabad',
+    period: 'Feb 2023 — Feb 2024', location: 'Banglore',
     points: [
       'Executed on-page, off-page & technical SEO that grew rankings.',
       'Conducted SEO audits, backlink building, and content optimisation.',
@@ -353,7 +350,7 @@ function Nav() {
     <header className="nav">
       <Link to="/" className="logo interactive" aria-label="Ahana — home" onClick={() => setOpen(false)}>
         <span className="logo-text">
-          <span className="logo-name">Ahana</span><span className="logo-dot-char">.</span><span className="logo-tld">live</span>
+          <span className=""></span> <span className="logo-name">Ahana .</span><span className="logo-tld"> &nbsp;live</span>
         </span>
       </Link>
       <nav className={`nav-links ${open ? 'is-open' : ''}`}>
@@ -408,8 +405,8 @@ function Footer() {
         <div className="footer-col">
           <p className="footer-eyebrow">Socials</p>
           <ul className="footer-links">
-            <li><a href="https://linkedin.com/in/ahana-chowdhury" target="_blank" rel="noreferrer" className="interactive">LinkedIn <ArrowUpRight size={12} /></a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="interactive">Instagram <ArrowUpRight size={12} /></a></li>
+            <li><a href="https://www.linkedin.com/in/ahana-chowdhury-774268212/" target="_blank" rel="noreferrer" className="interactive">LinkedIn <ArrowUpRight size={12} /></a></li>
+            <li><a href="https://wa.me/+918972855757" target="_blank" rel="noreferrer" className="interactive">WhatAapp <ArrowUpRight size={12} /></a></li>
             <li><a href="mailto:iamahanachowdhury@gmail.com" className="interactive">Email <ArrowUpRight size={12} /></a></li>
           </ul>
         </div>
@@ -417,7 +414,15 @@ function Footer() {
       <div className="footer-bottom">
         <span>© {year} Ahana Chowdhury — Digital Marketing Specialist</span>
         <span className="footer-made">
-          Made with <Heart size={12} /> & <Coffee size={12} /> in Hyderabad
+          Made with <Heart size={14} className="footer-made-heart" fill="currentColor" /> by{' '}
+          <a
+            href="https://www.linkedin.com/in/abhi-mishra-356964177/"
+            target="_blank"
+            rel="noreferrer"
+            className="footer-made-link interactive"
+          >
+            Abhi <ArrowUpRight size={14} />
+          </a>
         </span>
       </div>
     </footer>
@@ -512,10 +517,10 @@ function HomePage() {
       <section className="hero" ref={heroRef}>
         <motion.div style={{ opacity: heroOpacity }} className="hero-inner">
           <motion.div variants={stagger} initial="hidden" animate="show">
-            <motion.div variants={fadeUp} className="hero-meta-top">
+            {/* <motion.div variants={fadeUp} className="hero-meta-top">
               <span className="hero-loc"><span className="dot dot-pulse" /> Hyderabad — IN</span>
               <span className="hero-role-top">Digital Marketing Specialist</span>
-            </motion.div>
+            </motion.div> */}
 
             <h1 className="hero-title">
               <span className="hero-row-line">
@@ -551,7 +556,7 @@ function HomePage() {
               </div>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="kpi-grid" aria-label="Impact at a glance">
+            {/* <motion.div variants={fadeUp} className="kpi-grid" aria-label="Impact at a glance">
               {[
                 { v: '50K+', l: 'App downloads', I: TrendingUp },
                 { v: '5M+',  l: 'Reel views',    I: Megaphone },
@@ -564,7 +569,7 @@ function HomePage() {
                   <div className="kpi-l">{l}</div>
                 </div>
               ))}
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
 
@@ -579,7 +584,7 @@ function HomePage() {
       </section>
 
       {/* MARQUEE */}
-      <Marquee items={['SEO', 'Performance Ads', 'Influencer', 'GA4', 'CRO', 'Brand Growth', 'ASO', 'Email · WhatsApp']} />
+      <Marquee items={['SEO', 'Performance Ads', 'Influencer Management', 'GA4', 'CRO', 'Brand Growth', 'ASO', 'Email Marketing' ,' WhatsApp Marketing','Social-Media Marketing']} />
 
       {/* STATS BAND */}
       <section className="stats-band">
@@ -593,7 +598,7 @@ function HomePage() {
         ))}
       </section>
 
-      {/* ABOUT TEASER */}
+      {/* ABOUT + SKILLS */}
       <section className="section about-teaser">
         <SectionHead
           idx="01"
@@ -602,20 +607,54 @@ function HomePage() {
         />
         <Reveal>
           <p className="about-teaser-text">
-            I’m Ahana — a Digital Marketing Specialist with 3+ years across performance marketing, SEO, social, and influencer programs. I’ve managed high-budget campaigns on Meta and Google Ads, led SEO for 18+ US-based e-commerce sites, and built brand & growth from scratch for community-led products.
+            I’m Ahana — I turn channels into compounding growth across paid, SEO, social and lifecycle. Equally at home in GA4 and a brand brief.
           </p>
         </Reveal>
         <Reveal>
-          <Link to="/about" className="big-link interactive">
-            More about me <ArrowUpRight size={28} />
-          </Link>
+          <ul className="about-list">
+            <li><strong>Performance.</strong> Paid media across Google, Meta, LinkedIn, YouTube — optimised for ROAS.</li>
+            <li><strong>SEO &amp; SEM.</strong> Technical, on-page, off-page, keyword strategy, schema, EEAT, ASO.</li>
+            <li><strong>Brand &amp; Social.</strong> Organic + paid strategy, influencer programs, content that compounds.</li>
+            <li><strong>Analytics.</strong> GA4, Search Console, SEMrush, Ahrefs, Moz — turning data into decisions.</li>
+          </ul>
+        </Reveal>
+      </section>
+
+      {/* SKILLS + TOOLS */}
+      <section className="section section-soft">
+        <SectionHead
+          idx="02"
+          label="What I know"
+          title={<>Skills &amp; tools I work <em>with</em>.</>}
+        />
+        <Reveal>
+          <div className="skill-cloud">
+            {SKILLS.map((s) => (<span key={s} className="chip interactive">{s}</span>))}
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="tools-grid">
+            {TOOLS.map((t) => (
+              <div key={t.name} className="tool interactive">
+                <span className="tool-cat">{t.cat}</span>
+                <span className="tool-name">{t.name}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="section-cta">
+            <Link to="/about" className="big-link interactive">
+              More about me <ArrowUpRight size={28} />
+            </Link>
+          </div>
         </Reveal>
       </section>
 
       {/* SERVICES */}
-      <section className="section section-soft">
+      <section className="section">
         <SectionHead
-          idx="02"
+          idx="03"
           label="Services"
           title={<>What I do — and how it shows<br />up in your <em>dashboard</em>.</>}
         />
@@ -643,9 +682,9 @@ function HomePage() {
       </section>
 
       {/* WORK */}
-      <section className="section">
+      <section className="section section-soft">
         <SectionHead
-          idx="03"
+          idx="04"
           label="Selected Work"
           title={<>Brands I’ve helped <em>grow</em>.</>}
         />
@@ -658,9 +697,9 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="section section-soft">
+      <section className="section">
         <SectionHead
-          idx="04"
+          idx="05"
           label="Kind words"
           title={<>What people say <em>after</em><br />the campaign goes live.</>}
         />
@@ -689,30 +728,10 @@ function AboutPage() {
       <section className="page-hero">
         <Reveal><span className="eyebrow">[ About ]</span></Reveal>
         <h1 className="page-title">
-          <SplitText text="A specialist who reads the" />
-          <br /><SplitText text="dashboard" /> <em><SplitText text="and" /></em> <SplitText text="the audience." />
+          <SplitText text="The road so far —" />
+          <br /><SplitText text="rooms," /> <em><SplitText text="rituals" /></em> <SplitText text="& receipts." />
         </h1>
       </section>
-
-      <section className="section about-split">
-        <div className="about-text">
-          <Reveal>
-            <p className="about-lede">
-              3+ years across performance marketing, SEO, social, and influencer programs. I’ve managed high-budget campaigns on Meta and Google Ads, led SEO for 18+ US-based e-commerce sites, and built brand & growth from scratch for community-led products.
-            </p>
-          </Reveal>
-          <Reveal>
-            <ul className="about-list">
-              <li><strong>Performance.</strong> Paid media across Google, Meta, LinkedIn, YouTube — optimised for ROAS.</li>
-              <li><strong>SEO & SEM.</strong> Technical, on-page, off-page, keyword strategy, schema, EEAT, ASO.</li>
-              <li><strong>Brand & Social.</strong> Organic + paid strategy, influencer programs, content that compounds.</li>
-              <li><strong>Analytics.</strong> GA4, Search Console, SEMrush, Ahrefs, Moz — turning data into decisions.</li>
-            </ul>
-          </Reveal>
-        </div>
-      </section>
-
-      <Marquee items={SKILLS.slice(0, 12)} />
 
       {/* TIMELINE */}
       <section className="section">
@@ -738,28 +757,8 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* SKILLS + TOOLS */}
-      <section className="section section-soft">
-        <SectionHead idx="02" label="Toolkit" title={<>Skills & tools I work with.</>} />
-        <Reveal>
-          <div className="skill-cloud">
-            {SKILLS.map((s) => (<span key={s} className="chip interactive">{s}</span>))}
-          </div>
-        </Reveal>
-        <Reveal>
-          <div className="tools-grid">
-            {TOOLS.map((t) => (
-              <div key={t.name} className="tool interactive">
-                <span className="tool-cat">{t.cat}</span>
-                <span className="tool-name">{t.name}</span>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </section>
-
       {/* CERTS + EDU */}
-      <section className="section certs-grid">
+      <section className="section section-soft certs-grid">
         <Reveal>
           <div className="cert-block">
             <span className="eyebrow">[ Education ]</span>
@@ -866,24 +865,6 @@ function WorkPage() {
         <ProjectList items={PROJECTS} />
       </section>
 
-      <section className="section section-soft">
-        <SectionHead idx="02" label="Gallery" title={<>A peek behind the campaigns.</>} />
-        <div className="gallery">
-          {PROJECTS.map((p, i) => (
-            <Reveal key={p.slug}>
-              <Link to={`/work/${p.slug}`} className={`gal-card gal-${i % 3} interactive`} data-cursor="view">
-                <Illustration variant={(`gallery-${(i % 4) + 1}`) as any} ariaLabel={p.name} />
-                <div className="gal-meta">
-                  <span>{p.tag}</span>
-                  <span>{p.year}</span>
-                </div>
-                <h4>{p.name}</h4>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       <CtaStrip />
     </>
   );
@@ -933,9 +914,9 @@ function ProjectPage() {
       </section>
 
       <section className="section project-detail">
-        <Reveal className="project-cover">
+        {/* <Reveal className="project-cover">
           <Illustration variant={project.illustration} ariaLabel={project.name} />
-        </Reveal>
+        </Reveal> */}
         <div className="project-grid">
           <Reveal>
             <div className="project-story">
@@ -1044,14 +1025,14 @@ function ContactPage() {
               <ul className="contact-list">
                 <li><Phone size={14} /> +91 89728 55757</li>
                 <li><MapPin size={14} /> Hitech City, Hyderabad — 500081</li>
-                <li><Globe size={14} /> <a href="https://linkedin.com/in/ahana-chowdhury" target="_blank" rel="noreferrer" className="interactive">linkedin.com/in/ahana-chowdhury</a></li>
+                <li><Globe size={14} /> <a href="https://www.linkedin.com/in/ahana-chowdhury-774268212/" target="_blank" rel="noreferrer" className="interactive">linkedin.com/in/ahana-chowdhury-774268212</a></li>
                 <li><AtSign size={14} /> <a href="https://instagram.com" target="_blank" rel="noreferrer" className="interactive">instagram/@_cravingly</a></li>
               </ul>
               <div className="contact-trust">
                 <div className="trust-stars">
                   {[0,1,2,3,4].map((i) => (<Star key={i} size={14} fill="#f5f1e8" stroke="none" />))}
                 </div>
-                <span>Trusted by 20+ brands</span>
+                <span>Trusted by 4+ brands</span>
               </div>
               <div className="contact-langs">
                 <span className="eyebrow">Languages</span>

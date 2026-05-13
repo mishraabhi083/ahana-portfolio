@@ -363,16 +363,22 @@ function Portrait() {
 /* ---- HERO INLINE — small abstract orbit (transparent) ---- */
 function HeroInline() {
   return (
-    <svg viewBox="0 0 220 140" className="ill-svg" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 220 140" className="ill-svg hero-orbit" preserveAspectRatio="xMidYMid meet">
       <Defs id="hi" />
       <g transform="translate(110 70)">
-        <ellipse rx="80" ry="30" fill="none" stroke="var(--accent)" strokeWidth="2" opacity="0.9" />
-        <ellipse rx="80" ry="30" fill="none" stroke="var(--accent-2)" strokeWidth="2" opacity="0.6" transform="rotate(45)" />
-        <ellipse rx="80" ry="30" fill="none" stroke="var(--lime)" strokeWidth="2" opacity="0.5" transform="rotate(-45)" />
-        <circle r="22" fill="url(#hi-g1)" />
-        <circle cx="80" cy="0" r="6" fill="var(--accent)" />
-        <circle cx="-56" cy="-32" r="5" fill="var(--accent-2)" />
-        <circle cx="-56" cy="32" r="4" fill="var(--lime)" />
+        <g className="hero-orbit-ring hero-orbit-ring-1">
+          <ellipse rx="80" ry="30" fill="none" stroke="var(--accent)" strokeWidth="2" opacity="0.9" />
+          <circle cx="80" cy="0" r="6" fill="var(--accent)" />
+        </g>
+        <g className="hero-orbit-ring hero-orbit-ring-2" transform="rotate(45)">
+          <ellipse rx="80" ry="30" fill="none" stroke="var(--accent-2)" strokeWidth="2" opacity="0.6" />
+          <circle cx="-80" cy="0" r="5" fill="var(--accent-2)" />
+        </g>
+        <g className="hero-orbit-ring hero-orbit-ring-3" transform="rotate(-45)">
+          <ellipse rx="80" ry="30" fill="none" stroke="var(--lime)" strokeWidth="2" opacity="0.5" />
+          <circle cx="80" cy="0" r="4" fill="var(--lime)" />
+        </g>
+        <circle r="22" fill="url(#hi-g1)" className="hero-orbit-core" />
       </g>
     </svg>
   );

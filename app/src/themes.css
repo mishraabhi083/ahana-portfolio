@@ -192,6 +192,21 @@ body {
 .hero-img .illustration { background: transparent; overflow: visible; }
 .hero-img .ill-svg { object-fit: contain; }
 
+/* Hero orbit animation — whole illustration wobble */
+.hero-orbit {
+  transform-origin: 50% 50%;
+  animation: hero-orbit-wobble 5s ease-in-out infinite;
+}
+@keyframes hero-orbit-wobble {
+  0%, 100% { transform: translate(0, 0) rotate(-2deg); }
+  25%      { transform: translate(2px, -3px) rotate(1.5deg); }
+  50%      { transform: translate(-1px, 2px) rotate(2.5deg); }
+  75%      { transform: translate(-2px, -2px) rotate(-1deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit { animation: none; }
+}
+
 /* Project list cursor preview */
 .proj-preview .illustration { border-radius: inherit; }
 
