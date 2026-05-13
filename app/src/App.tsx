@@ -352,7 +352,9 @@ function Nav() {
   return (
     <header className="nav">
       <Link to="/" className="logo interactive" aria-label="Ahana — home" onClick={() => setOpen(false)}>
-        <span className="logo-mark"><img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Ahana" /></span>
+        <span className="logo-text">
+          <span className="logo-name">Ahana</span><span className="logo-dot-char">.</span><span className="logo-tld">live</span>
+        </span>
       </Link>
       <nav className={`nav-links ${open ? 'is-open' : ''}`}>
         {links.map((l) => (
